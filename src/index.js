@@ -50,11 +50,9 @@ module.exports = function toReadable (number) {
         toTen=number-toThousand*100-toHundred
         if(number%100 == 0){
             return string = obj[toThousand] + ' ' + 'hundred'
-         }
-        if(toHundred+toTen<20){
+        }if(toHundred+toTen<20){
             return string = obj[toThousand] + ' ' + 'hundred' + ' '+ obj[toHundred+toTen]
-        }
-        if(toTen == 0){
+        }if(toTen == 0){
            return string = obj[toThousand] + ' ' + 'hundred' + ' ' + obj[toHundred]
         }if(toHundred == 0){
             string = obj[toThousand] + ' ' + 'hundred' + ' ' + obj[toTen]
